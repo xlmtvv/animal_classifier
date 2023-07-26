@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Classifier Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .upload-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .upload-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold mb-4">Welcome to the Animal Classifier!</h1>
+            <p class="mb-4">Upload an image of an animal to classify:</p>
+            <form class="flex items-center" method="post" enctype="multipart/form-data" action="{% url 'classify_animal' %}">
+                {% csrf_token %}
+                <div class="mr-4">
+                    <label for="image" class="text-gray-600">Choose an image:</label>
+                    <input type="file" class="ml-1" name="image" id="image">
+                </div>
+                <button type="submit" class="upload-btn">Classify</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

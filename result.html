@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Classifier Result</title>
+    <!-- Подключаем Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Дополнительные стили */
+        body {
+            background-color: #f8f9fa;
+        }
+        .result-box {
+            background-color: #4caf50;
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .result-box h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .result-box p {
+            font-size: 18px;
+        }
+        .result-box .emoji {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+        .return-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .return-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <div class="result-box mb-4">
+            <span class="emoji">🐾</span>
+            <h1 class="mb-4">Classified animal:</h1>
+            <p>Predicted class: {{ predicted_class }}</p>
+        </div>
+        <a href="{% url 'home' %}" class="return-btn">Return to Home</a>
+    </div>
+</body>
+</html>
