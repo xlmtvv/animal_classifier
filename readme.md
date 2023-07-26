@@ -69,10 +69,3 @@ Before running the application, you need to have the following installed:
 
 Please note that the dataset used for training the model is not included in this repository due to privacy and space-saving reasons. However, you can download the dataset from the link above if you need it for training or further analysis.
 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
